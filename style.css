@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.headResponsive {
+    display: none;
+}
+
+#navbar {
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    display: grid;
+    align-content: center;
+    justify-content: end;
+}
+
+#navbar .head-title {
+    position: absolute;
+    font-size: 3.7em;
+    padding: 0px 20px;
+    margin-top: -5px;
+    color: #fff;
+    font-family: 'Teko', sans-serif;
+}
+
+#navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    font-family: 'Red Hat Mono', sans-serif, monospace;
+    font-size: 1.3em;
+}
+
+#navbar ul li {
+    margin: 15px;
+    padding: 9px 5px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    transition: all .5s ease;
+}
+
+#navbar a {
+    padding: 10px 5px;
+    color: #fff;
+    transition: all .4s ease;
+}
+
+#navbar li:hover {
+    background: #fff;
+    border-radius: 20px;
+}
+
+#navbar a:hover {
+    color: #000;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#welcome-section {
+    background: linear-gradient(180deg, #ccc, #000);
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.welcome-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+#products-section {
+    background-color: #f2f2f2;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contact-section {
+    background-color: #fff;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer {
+    background: #1E1E1E;
+    height: auto;
+}
+
+footer p {
+    padding: 20px;
+    text-align: center;
+    font-family: 'Red Hat Mono', monospace;
+    color: #ccc;
+}
+
+
+
+@media (max-width: 768px) {
+    .head {
+        display: none;
+    }
+    .headResponsive {
+        display: block;
+    } 
+    .menu {
+        position: fixed;
+        transform: translateX(100%);
+        transition: transform .3s;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 99;
+        background: #111;
+        color: white;
+        list-style: none;
+        padding-top: 4rem;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-left: 0px;
+        display: grid;
+        align-content: space-evenly;
+        justify-content: center;
+        justify-items: center;
+    }
+    .menu a {
+        text-decoration: none;
+        font-size: 1.3em;
+        font-family: sans-serif;
+        color: #fff;
+        text-transform: uppercase;
+        border: 1px solid #fff;
+        padding: 10px;
+    }
+    .hamburger {
+        display: block;
+        position: fixed;
+        z-index: 100;
+        top: 1rem;
+        right: 1rem;
+        padding: 3px;
+        border: #fff solid 2px;
+        background: transparent;
+        cursor: pointer;
+        color: #fff;
+    }
+    i.closeIcon.material-icons {
+        display: none;
+    }
+    .showMenu {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 375px) {
+    .menu a {
+        font-size: 1em;
+    }
+}
