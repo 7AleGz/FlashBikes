@@ -22,7 +22,7 @@
     display: grid;
     align-content: center;
     justify-content: end;
-    z-index: 1;
+    z-index: 2;
 }
 
 #navbar .head-title {
@@ -140,32 +140,56 @@
     grid-template-rows: repeat(2, 50%);
     grid-template-areas: "a b"
                          "c d";
+    box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
 }
 
-.product1, .product2, .product3, .product4 {
+.product {
     width: 100%;
     height: 100%;
-    position: relative;
 }
 
-.product__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.product__span {
+.product-container {
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-    position: absolute;
-    color: #fff;
+    align-items: center;
 }
 
-.product__span:hover {
+.product-container figure {
+    width: 100%;
+    height: 100%;
+    position:relative;
+    overflow: hidden;
+}
+
+.product-container figure img {
+    width: 100%;
+    height: 100%;
+    transition: all .4s ease-out;
+    will-change: transform;
+    object-fit: cover;
+}
+
+.product-container figure .product__span {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-weight: 600;
+    transition: all .4s ease-out;
+}
+.product-container figure:hover > .product__span {
+    font-size: 1.3em;
     background:hsla(0, 0%, 0%, 0.9);
+}
+.product-container figure:hover > img {
+    transform: scale(1.3);
 }
 
 /* -------------------------------------------------------------------------------------------- */
