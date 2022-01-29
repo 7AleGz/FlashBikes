@@ -129,6 +129,12 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#products-section p {
+    font-size: 7vh;
+    font-family: 'Caveat', monospace;
+    color: #f3f3f3;
+}
+
 .products-gallery {
     background-color: hsla(0, 0%, 12%, 0.7);
     width: 95vw;
@@ -292,6 +298,17 @@ footer p {
         background: linear-gradient(180deg, #fff, #0f3443);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+    }
+}
+
+@media (max-width: 425px) {
+    .products-gallery {
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(4, 25%);
+        grid-template-areas: "a"
+                             "b"
+                             "c"
+                             "d";
     }
 }
 
