@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap');
 
 * {
     padding: 0;
@@ -98,6 +99,10 @@
     align-items: center;
 }
 
+.productsAccess .bx {
+    padding: 0;
+}
+
 .productsAccess__button {
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
@@ -130,9 +135,10 @@
 }
 
 #products-section p {
-    font-size: 7vh;
+    font-size: 2em;
     font-family: 'Caveat', monospace;
     color: #f3f3f3;
+    text-align: center;
 }
 
 .products-gallery {
@@ -192,7 +198,7 @@
 }
 .product-container figure:hover > .product__span {
     font-size: 1.3em;
-    background:hsla(0, 0%, 0%, 0.9);
+    background:hsla(0, 0%, 0%, 0.7);
 }
 .product-container figure:hover > img {
     transform: scale(1.3);
@@ -202,8 +208,9 @@
 
 #contact-section {
     background: linear-gradient(#093637, #232526, #1E1E1E);
-    height: 100vh;
     width: 100%;
+    min-height: 100vh;
+    height: auto;
     display: grid;
     justify-items: center;
     align-items: center;
@@ -211,6 +218,48 @@
     font-size: 2em;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
+}
+
+.whyfb {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.whyfb__title {
+    font-size: 1.4em;
+    margin: 30px 0 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.whyfb .items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 1em;
+}
+
+.whyfb .items div {
+    margin: 15px 5px;
+}
+
+.item .bx {
+    font-size: 4em;
+    padding: 10px;
+    margin: 10px 10px 10px 0;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+.item .whyfb__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-family: 'Jura', sans-serif;
 }
 
 .contact-line {
@@ -235,7 +284,6 @@
     color: #fff;
     padding: 1.7vw;
 }
-
 .contact-media a:hover {
     color: #b3b3b3;
 }
@@ -338,6 +386,37 @@ footer p {
                              "b"
                              "c"
                              "d";
+    }
+    #products-section p {
+        font-size: 1.5em;
+    }
+    .whyfb .whyfb__title {
+        font-size: .9em;
+    }
+    .whyfb .items div {
+        margin: 10px 3px;
+    }
+    .item .whyfb__item {
+        flex-direction: column;
+        border: 1px solid #fff;
+        margin: 10px 3px;
+    }
+    .item .whyfb__item p {
+        padding: 7px;
+        font-size: .7em;
+    }
+    .item .bx {
+        font-size: 3em;
+        padding: 10px;
+        margin: 10px 0 0 0;
+        text-align: center;
+        border: 1px solid #fff;
+        border-radius: 50%;
+    }
+    .contact-media {
+        padding: 50px 0 30px 0;
+        flex-direction: column;
+        font-size: .9em;
     }
 }
 
