@@ -269,31 +269,13 @@
     display: block;
     height: 2px;
     background: radial-gradient(#ccc, #000);
-    margin-top: 30px;
+    margin: 30px 0 30px 0;
 }
-
-.contact-media {
-    padding: 50px 0px 0px 0px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    font-size: 1em;
-}
-
-.contact-media a {
-    color: #fff;
-    padding: 1.7vw;
-}
-.contact-media a:hover {
-    color: #b3b3b3;
-}
-
-/* -------------------------------------------------------------------------------------------- */
 
 form {
     background: rgba(27,31,34,0.80);
     margin: 50px auto;
+    border: 1px solid #fff;
     border-radius: 5px;
     padding: 55px 30px;
     font-family: 'Source Sans Pro', sans-serif;
@@ -335,6 +317,7 @@ form .half .item input {
     height: 44px;
     background: transparent;
     font-size: 17px;
+    color: #fff;
 }
   
 form .full {
@@ -351,6 +334,7 @@ form .full textarea {
     width: 100%;
     height: 200px;
     font-size: 17px;
+    color: #fff;
 }
   
 form .action {
@@ -375,17 +359,30 @@ form .action input[type="submit"] {
     background: white;
     color: black;
 }
+
+form .action input[type="reset"] {
+    color: #fff;
+}
   
 form .icons {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
 }
 
 form .icons a {
     border: 1px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    padding: 10px;
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
 }
   
 form .half .item input:focus, form .full textarea:focus, form .action input[type="reset"]:hover, form .icons a:hover {
@@ -517,24 +514,33 @@ footer p {
         border: 1px solid #fff;
         border-radius: 50%;
     }
-    .contact-media {
-        padding: 50px 0 30px 0;
-        flex-direction: column;
+    .contact-form {
+        width: 98%;
+    }
+    form {
+        padding: 30px 15px;
+    }
+    form .title h2 {
         font-size: .9em;
+        letter-spacing: 0;
     }
-
-    
-    form .half{
+    form .half {
         flex-direction: column;
     }
-    form .half .item{
+    form .half .item {
         width: 100%;
     }
-    form .action{
+    form .icons {
+        justify-content: space-evenly; 
+    }
+    form .icons a {
+        margin: 0;
+    }
+    form .action {
         display: flex;
         flex-direction: column;
     }
-    form .action input{
+    form .action input {
         margin-bottom: 10px;
         width: 100%;
     }
